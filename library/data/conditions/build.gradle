@@ -1,0 +1,23 @@
+plugins {
+	id("qsl.module")
+}
+
+qslModule {
+	name = "Quilt Data Conditions API"
+	moduleName = "conditions"
+	id = "quilt_data_conditions"
+	description = "Data Conditions API"
+	moduleDependencies {
+		core {
+			api("qsl_base")
+			api("registry")
+			api("resource_loader")
+			testmodOnly("lifecycle_events")
+		}
+	}
+	entrypoints {
+		events {
+			// values = ["org.quiltmc.qsl.recipe.impl.RecipeManagerImpl"]
+		}
+	}
+}
